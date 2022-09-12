@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/containersearch"
+        android:layout_width="410dp"
+
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnbackmain"
+            android:layout_width="58dp"
+            android:layout_height="48dp"
+            android:background="#20AEE3"
+            app:srcCompat="@drawable/abc_vector_test"
+
+            />
+
+        <SearchView
+            android:id="@+id/Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#20AEE3"
+            android:queryHint="Tìm kiếm bài hát"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containermv"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:orientation="horizontal"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containersearch">
+
+        <Button
+            android:id="@+id/btnsong"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:text="Nhạc"
+            android:textAllCaps="false"
+            android:textColor="#C2F3EC"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonsinger"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:text="Ca sĩ"
+            android:textAllCaps="false"
+            android:textColor="#C2F3EC"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerlistview"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="5dp"
+        app:layout_goneMarginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ListView
+            android:id="@+id/listviewsonglist"
+            android:layout_width="match_parent"
+            android:layout_height="540dp"
+            android:divider="@color/white"
+            android:dividerHeight="5.0sp">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnbackscene"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/containerlistview"
+        app:srcCompat="@drawable/backtosongscenebutton" />
+
+    <!--  <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/miniscene"
+          android:layout_width="match_parent"
+          android:layout_height="70dp"
+          android:background="@drawable/custom_miniscene"
+          app:layout_constraintBottom_toBottomOf="parent"
+
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          android:visibility="invisible"
+          >
+
+          <ImageButton
+              android:id="@+id/miniprev"
+              android:layout_width="35dp"
+              android:layout_height="35dp"
+              android:layout_marginStart="72dp"
+              android:layout_marginBottom="5dp"
+              android:background="@drawable/prevbutton"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toEndOf="@+id/minisceneimage" />
+
+          <ImageButton
+              android:id="@+id/miniplaypause"
+              android:layout_width="35dp"
+              android:layout_height="35dp"
+              android:layout_marginStart="48dp"
+              android:layout_marginEnd="48dp"
+              android:layout_marginBottom="5dp"
+              android:background="@drawable/pausebutton"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toEndOf="@+id/minisceneimage" />
+
+          <ImageButton
+              android:id="@+id/mininext"
+              android:layout_width="35dp"
+              android:layout_height="35dp"
+              android:layout_marginEnd="72dp"
+              android:layout_marginBottom="5dp"
+              android:background="@drawable/nextbutton"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent" />
+
+          <TextView
+              android:id="@+id/miniTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:text="Tên bài hát"
+              android:textSize="16sp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toEndOf="@+id/minisceneimage"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <ImageView
+              android:id="@+id/minisceneimage"
+              android:layout_width="70dp"
+              android:layout_height="65dp"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              tools:srcCompat="@tools:sample/avatars" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout> -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

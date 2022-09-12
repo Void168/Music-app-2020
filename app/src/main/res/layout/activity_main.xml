@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SongScene">
+    <LinearLayout
+        android:id="@+id/containersearch"
+        android:layout_width="410dp"
+
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SearchView
+            android:id="@+id/Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#20AEE3"
+            android:queryHint="Tìm kiếm bài hát"
+            android:paddingStart="10dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containermv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerbutton">
+
+        <VideoView
+            android:id="@+id/mv"
+            android:layout_width="360dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="17dp"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mvthumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="@+id/containermv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/containermv"
+        app:layout_constraintTop_toTopOf="@+id/containermv"
+        app:srcCompat="@drawable/nangtho" />
+
+    <ImageButton
+        android:id="@+id/mvplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="@+id/containermv"
+        app:layout_constraintEnd_toEndOf="@+id/containermv"
+        app:layout_constraintStart_toStartOf="@+id/containermv"
+        app:layout_constraintTop_toTopOf="@+id/containermv"
+        app:srcCompat="@drawable/ic_play"
+        />
+
+    <LinearLayout
+        android:id="@+id/layoutcarousel"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/containersearch"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="5dp">
+
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carousel"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            app:fillColor="#FFFFFFFF"
+            app:pageColor="#00000000"
+            app:radius="6dp"
+            app:slideInterval="3000"
+            app:strokeColor="#FF777777"
+            app:strokeWidth="1dp"
+            tools:ignore="MissingConstraints">
+
+        </com.synnapps.carouselview.CarouselView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerbutton"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutcarousel">
+
+        <Button
+            android:id="@+id/buttonsinger"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:text="Ca sĩ"
+            android:textAllCaps="false"
+            android:textColor="#C2F3EC"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnsong"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:text="Nhạc"
+            android:textAllCaps="false"
+            android:textColor="#C2F3EC"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtMV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="MV của tháng: Nàng Thơ"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/containermv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerbutton" /><![CDATA[
+
+
+
+
+
+        />
+
+
+
+]]>
+</androidx.constraintlayout.widget.ConstraintLayout>
